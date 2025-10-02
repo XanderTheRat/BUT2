@@ -1,4 +1,4 @@
-package vigenere;
+package model;
 
 public enum Alphabet {
     // Caractères spéciaux en premier
