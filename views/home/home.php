@@ -1,0 +1,6 @@
+<body>
+    <h1>Bienvenue !</h1>
+    <p>Ce site est conçu pour vous faire découvrir et apprendre à cuisiner de façon originale.</p>
+    <p>Vous pourrez trouver ici des recettes de plats simples, des idées de plats innovants.</p>
+</table>
+</body>
