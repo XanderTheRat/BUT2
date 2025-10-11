@@ -1,21 +1,21 @@
 package bruteforce;
 
-import utf8.HashageXOR;
+import utf8.Convertisseur;
 import utf8.HasheurBinaire;
 
 import java.util.ArrayList;
 
-public class BruteForceCollisionXOR {
+public class BruteForceCollision {
     private Integer nbEssaies;
     private String hashCible;
     private ArrayList<String> collisionsTrouvees;
-    private HashageXOR hash;
+    private HasheurBinaire hash;
 
-    public BruteForceCollisionXOR(String hashCible) {
+    public BruteForceCollision(String hashCible) {
         this.nbEssaies = 0;
         this.hashCible = hashCible;
         this.collisionsTrouvees = new ArrayList<String>();
-        hash = new HashageXOR();
+        hash = new HasheurBinaire();
     }
 
     public void ajouterCollision(String collision) {
@@ -29,7 +29,15 @@ public class BruteForceCollisionXOR {
     public ArrayList<String> trouverCollision(Integer borneInf, Integer borneSup) {
         this.nbEssaies = 0;
         try {
-            for (char car : )
+            for (int decimalCaractere = borneInf; decimalCaractere <= borneSup; decimalCaractere++) {
+                if (hash.estValide((char) decimalCaractere)) {
+                    this.nbEssaies++;
+                    String hashTeste = HasheurBinaire.convertirEnBinaire(decimalCaractere);
+                    if (hashTeste.equals(this.hashCible)) {
+                        this.ajouterCollision(String.valueOf((char) decimalCaractere));
+                    }
+                }
+            }
 
             return this.collisionsTrouvees;
         }
@@ -37,5 +45,4 @@ public class BruteForceCollisionXOR {
             throw new RuntimeException(e);
         }
     }
-}
 }

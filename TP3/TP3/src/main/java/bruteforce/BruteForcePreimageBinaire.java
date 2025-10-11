@@ -1,6 +1,7 @@
 package bruteforce;
 
 import utf8.Convertisseur;
+import utf8.HasheurBinaire;
 
 import java.util.ArrayList;
 
@@ -8,11 +9,13 @@ public class BruteForcePreimage {
     private Integer nbEssaies;
     private String hashCible;
     private ArrayList<String> preimageTrouvees;
+    private HasheurBinaire hash;
 
     public BruteForcePreimage(String hashCible) {
         this.nbEssaies = 0;
         this.hashCible = hashCible;
         this.preimageTrouvees = new ArrayList<String>();
+        hash  = new HasheurBinaire();
     }
 
     public void ajouterPreimage(String collision) {
@@ -32,7 +35,7 @@ public class BruteForcePreimage {
 
             while (nombrePreimage != 0 || this.nbEssaies < 10000) {
                 Integer nombreAleatoire = (int) (Math.random() * (borneSup - borneInf + 1)) + borneInf;
-                if (Convertisseur.estValide(Character.highSurrogate(nombreAleatoire)) && Convertisseur.convertirEnBinaire(nombreAleatoire).equals(this.hashCible)) {
+                if (hash.estValide(Character.highSurrogate(nombreAleatoire)) && HasheurBinaire.convertirEnBinaire(nombreAleatoire).equals(this.hashCible)) {
                     nombrePreimage = nombreAleatoire;
                 }
                 this.nbEssaies++;
