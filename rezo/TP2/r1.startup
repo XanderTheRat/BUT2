@@ -1,0 +1,2 @@
+ip -6 a add fd00:0:2::ffff/48 dev eth0
+ip -6 a add fd00:0:3::ffff/48 dev eth0 
