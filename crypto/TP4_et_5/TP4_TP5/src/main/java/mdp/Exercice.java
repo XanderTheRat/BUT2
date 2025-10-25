@@ -11,20 +11,16 @@ import static mdp.GenerateurMDP.*;
 public class Exercice {
     static Scanner input = new Scanner(System.in);
 
-    static final String SORTIE_HASHEE_UNILIM = "7";
-    static final String SORTIE_HASHEE_AMAZON = "6";
-    static final String SORTIE_HASHEE_NETFLIX = "B";
-
     static final int LIMITE_INFERIEUR = 33;
     static final int LIMITE_SUPPERIEUR = 126;
 
     static void exo1() throws NoSuchAlgorithmException {
-        System.out.println("Entrer un mot de passe");
-        System.out.print("> ");
+        System.out.println(ansi().bold().fg(CYAN).a("Entrer un mot de passe"));
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         String mdp = input.nextLine();
 
-        System.out.println("Entrer un tag");
-        System.out.print("> ");
+        System.out.println(ansi().bold().fg(CYAN).a("Entrer un tag"));
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         String tag = input.nextLine();
 
         String hashe = genererMDPSimple(mdp, tag);
@@ -34,18 +30,18 @@ public class Exercice {
     }
 
     static void exo2() throws Exception {
-        System.out.println("Entrez une taille de mot de passe");
-        System.out.print("> ");
+        System.out.println(ansi().bold().fg(CYAN).a("Entrez une taille de mot de passe"));
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         int tailleMax = input.nextInt();
         input.nextLine();
 
 
-        System.out.println("Entrez votre mot de passe");
-        System.out.print("> ");
+        System.out.println(ansi().bold().fg(CYAN).a("Entrer un mot de passe"));
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         String mdp = input.nextLine();
 
-        System.out.println("Entrez votre tag");
-        System.out.print("> ");
+        System.out.println(ansi().bold().fg(CYAN).a("Entrer un tag"));
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         String tag = input.nextLine();
 
         input.close();
@@ -62,8 +58,8 @@ public class Exercice {
         if (!MPWDxiste()) {
             modifierMPWD();
         } else {
-            System.out.println("Voulez vous modifier le mot de passe maitre enregistrer dans .mpwd ? y/N");
-            System.out.print("> ");
+            System.out.println(ansi().bold().fgBright(YELLOW).a("Voulez vous modifier le mot de passe maitre enregistrer dans .mpwd ? y/N"));
+            System.out.print(ansi().bold().fg(GREEN).a("> "));
             validation = input.nextLine();
 
             if (validation.equalsIgnoreCase("Y")) {
@@ -72,11 +68,11 @@ public class Exercice {
         }
 
         System.out.println("Entrez votre tag :");
-        System.out.print("> ");
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         tag = input.nextLine();
 
         System.out.println("Entrez votre taille de mot de passe :");
-        System.out.print("> ");
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         tailleMax = input.nextInt();
 
         String hashe = genererMDPDepuisMDPMaitre(tag, tailleMax);
@@ -87,7 +83,7 @@ public class Exercice {
     private static void modifierMPWD() {
         String motDePasseMaitre;
         System.out.println("Entrez votre mot de passe maitre :");
-        System.out.print("> ");
+        System.out.print(ansi().bold().fg(GREEN).a("> "));
         motDePasseMaitre = input.nextLine();
 
         GenerateurMDP.enregistrerMPWD(motDePasseMaitre);
@@ -102,7 +98,7 @@ public class Exercice {
 
             char[] dictionnaire = new char[94];
             int index = 0;
-            for (char c = 33; c <= 126; c++) {
+            for (char c = LIMITE_INFERIEUR; c <= LIMITE_SUPPERIEUR; c++) {
                 dictionnaire[index++] = c;
             }
 
@@ -207,7 +203,6 @@ public class Exercice {
             }
 
             if (hashGenere.equals(hashCible)) {
-                System.out.println(ansi().bold().fg(GREEN).a("\n COLLISION TROUVÉE : " + mdpCandidat + "\n").reset());
                 resultat = mdpCandidat;
             }
         } else {

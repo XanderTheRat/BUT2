@@ -6,6 +6,7 @@ import static mdp.Exercice.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
+        System.setProperty("jansi.passthrough", "true");
          int choix;
          Scanner input = new Scanner(System.in);
          System.out.println("Quel exercice choissisez vous ?");
