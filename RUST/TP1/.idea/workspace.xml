@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml">
+      <package file="$PROJECT_DIR$/ownership">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="50127f59-c926-4d34-b23c-e4eebc28f6ce" name="Changes" comment="Add references for borrow Checker and swap()">
+      <change beforePath="$PROJECT_DIR$/ownership/src/main.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/bruteforce/BruteForceCollision.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/bruteforce/BruteForceCollisionBinaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/bruteforce/BruteForcePreimageBinaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/bruteforce/MainBruteForce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/utf8/Convertisseur.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/utf8/HashageXOR.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/utf8/HasheurBinaire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TP3/TP3/src/main/java/utf8/MainHashage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../crypto/TP4_et_5/TP4_TP5/src/main/java/mdp/Exercice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../crypto/TP4_et_5/TP4_TP5/src/main/java/mdp/Exercice.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="pcxMlkfg" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="353ldU8sbqNNVYnw2KwFh8bXFEw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Cargo.Run ownership.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test TP1.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/martin/github/BUT2/RUST/TP2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Cargo.Run ownership">
+    <configuration name="Run ownership" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="buildProfileId" value="dev" />
+      <option name="command" value="run --package ownership --bin ownership" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test TP1" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="buildProfileId" value="dev" />
+      <option name="command" value="test --workspace" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="50127f59-c926-4d34-b23c-e4eebc28f6ce" name="Changes" comment="" />
+      <created>1762346726839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762346726839</updated>
+      <workItem from="1762346728352" duration="140000" />
+      <workItem from="1762346892712" duration="214000" />
+      <workItem from="1762347152014" duration="95000" />
+      <workItem from="1762347262181" duration="217000" />
+      <workItem from="1762347508570" duration="3701000" />
+      <workItem from="1762525799726" duration="31000" />
+      <workItem from="1762525938685" duration="147000" />
+      <workItem from="1762526137878" duration="6000" />
+      <workItem from="1762526278826" duration="517000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit for Rust :&#10;Add Main, implement Rectangle, perimeter, derivation directive for Clone and Copy">
+      <option name="closed" value="true" />
+      <created>1762349333144</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762349333144</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add references for borrow Checker and swap()">
+      <option name="closed" value="true" />
+      <created>1762351159962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762351159962</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit for Rust :&#10;Add Main, implement Rectangle, perimeter, derivation directive for Clone and Copy" />
+    <MESSAGE value="Add references for borrow Checker and swap()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add references for borrow Checker and swap()" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
