@@ -1,15 +1,18 @@
 use clap::Parser;
+use std::sync::Arc;
+use std::sync::RwLock;
+
 #[tokio::main]
 async fn main() {
     let args: Args = Args::parse();
-    // printArgs(args.n);
 
     let mut handles= Vec::new();
+    let mut total = 0;
     if args.n>0 {
 
-        for i in 0..args.n {
+        for _ in 0..args.n {
             handles.push(tokio::spawn(async move {
-                printArgsAsync(i);
+                print_args_async(total).await;
             }));
         }
         for handle in handles {
@@ -24,7 +27,10 @@ struct Args {
     n : usize
 }
 
-fn printArgsAsync(n: usize) {
-    println!("Bonjour {}", n);
-    println!("Au revoir {}", n);
+async fn print_args_async(mut n:i32) -> i32 {
+	n += 1;	
+	
+	println!("Bonjour {}", n);
+	println!("Au revoir {}", n);
+	n    
 }
