@@ -77,13 +77,13 @@ public class Rover {
     public void turnRight() {
         switch (direction) {
             case NORTH:
-                direction = Direction.WEST;
+                direction = Direction.EAST;
                 break;
             case WEST:
                 direction = Direction.SOUTH;
                 break;
             case SOUTH:
-                direction = Direction.EAST;
+                direction = Direction.WEST;
                 break;
             default:
                 direction = Direction.NORTH;
@@ -96,6 +96,7 @@ public class Rover {
     public int getY() {
         return y;
     }
+
     public String direction() {
         return direction.direction();
     }
