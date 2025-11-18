@@ -13,23 +13,23 @@ public class Main {
         for  (char command : commands.toCharArray()) {
             switch (command) {
                 case 'f' :
-                    map.moveRoverForward();
+                    map.roverControler().moveRoverForward();
                     break;
                 case 'b' :
-                    map.moveRoverBackward();
+                    map.roverControler().moveRoverBackward();
                     break;
                 case 'l' :
-                    map.moveRoverLeft();
+                    map.roverControler().moveRoverLeft();
                     break;
                 case 'r' :
-                    map.moveRoverRight();
+                    map.roverControler().moveRoverRight();
                     break;
                 default :
                     System.out.println("Invalid command");
             }
         }
 
-        System.out.println("Rover at positions (" + map.rover().getX() + ":" + map.rover().getY() + ").");
+        System.out.println("Rover at positions (" + map.roverControler().rover().x() + ":" + map.roverControler().rover().y() + ").");
     }
 }
 
