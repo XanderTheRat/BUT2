@@ -1,10 +1,10 @@
 package map;
 
 public enum Direction {
-    SOUTH(3),
-    NORTH(1),
-    EAST(2),
-    WEST(4);
+    SOUTH("S"),
+    NORTH("N"),
+    EAST("E"),
+    WEST("W");
 
-    Direction(int i) {}
+    Direction(String direction) {}
 }
