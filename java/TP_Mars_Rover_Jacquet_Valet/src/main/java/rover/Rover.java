@@ -58,4 +58,37 @@ public class Rover {
             y -= DISTANCE;
         }
     }
+
+    public void turnLeft() {
+        switch (direction) {
+            case NORTH:
+                direction = Direction.EAST;
+                break;
+            case EAST:
+                direction = Direction.SOUTH;
+                break;
+            case SOUTH:
+                direction = Direction.WEST;
+                break;
+            default:
+                direction = Direction.NORTH;
+                break;
+        }
+    }
+
+    public void turnRight() {
+        switch (direction) {
+            case NORTH:
+                direction = Direction.WEST;
+                break;
+            case WEST:
+                direction = Direction.SOUTH;
+                break;
+            case SOUTH:
+                direction = Direction.EAST;
+                break;
+            default:
+                direction = Direction.NORTH;
+        }
+    }
 }
