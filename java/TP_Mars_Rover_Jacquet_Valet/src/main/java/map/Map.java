@@ -10,7 +10,7 @@ public class Map {
 
     Map(int nbTile) {
         map = new int[nbTile][nbTile];
-        rover = new Rover();
+        rover = new Rover(nbTile);
     }
 
 
