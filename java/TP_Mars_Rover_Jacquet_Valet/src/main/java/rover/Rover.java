@@ -2,15 +2,13 @@ package rover;
 
 import map.Direction;
 
-import java.awt.*;
-
 public class Rover {
     private Direction direction;
 
     private int x;
     private int y;
+    private int mapSize;
 
-    private int MAP_SIZE;
     private final int START_X = 0;
     private final int START_Y = 0;
     private final int DISTANCE = 1;
@@ -24,11 +22,11 @@ public class Rover {
 
     public Rover(int mapSize) {
         this();
-        MAP_SIZE = mapSize;
+        this.mapSize = mapSize;
     }
 
     public void moveToNorth() {
-        if (x+DISTANCE >= MAP_SIZE) {
+        if (x+DISTANCE >= mapSize) {
             x = START_X;
         } else {
             x += DISTANCE;
@@ -37,14 +35,14 @@ public class Rover {
 
     public void moveToSouth() {
         if (x < START_X) {
-            x = MAP_SIZE - DISTANCE;
+            x = mapSize - DISTANCE;
         } else {
             x -= DISTANCE;
         }
     }
 
     public void moveToEast() {
-        if (y+DISTANCE >= MAP_SIZE) {
+        if (y+DISTANCE >= mapSize) {
             y = START_Y;
         }  else {
             y += DISTANCE;
@@ -53,7 +51,7 @@ public class Rover {
 
     public void moveToWest() {
         if (y-DISTANCE < START_Y) {
-            y = MAP_SIZE - DISTANCE;
+            y = mapSize - DISTANCE;
         }  else {
             y -= DISTANCE;
         }
@@ -90,5 +88,15 @@ public class Rover {
             default:
                 direction = Direction.NORTH;
         }
+    }
+
+    public int  getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+    public String direction() {
+        return direction.direction();
     }
 }

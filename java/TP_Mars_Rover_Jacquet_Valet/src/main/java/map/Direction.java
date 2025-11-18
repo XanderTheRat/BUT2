@@ -6,5 +6,15 @@ public enum Direction {
     EAST("E"),
     WEST("W");
 
-    Direction(String direction) {}
+    private final String direction;
+
+    Direction(String direction) {
+        this.direction = direction;
+    }
+
+    public String direction() {
+        return direction;
+    }
+
+
 }
