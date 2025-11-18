@@ -25,6 +25,7 @@ public class Rover {
         this.mapSize = mapSize;
     }
 
+    //TODO: Can't move if rover encounters an obstacle and report it
     public void moveToNorth() {
         if (x+DISTANCE >= mapSize) {
             x = START_X;
