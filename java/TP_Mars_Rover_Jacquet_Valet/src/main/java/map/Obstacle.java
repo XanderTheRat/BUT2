@@ -1,4 +1,3 @@
 package map;
 
-public class Obstacle {
-}
+public record Obstacle(int x, int y) {}
