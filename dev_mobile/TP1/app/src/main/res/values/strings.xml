@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mon Application</string>
+    <string name="lorem_ipsum">Ceci est un texte</string>
+    <string name="saisie_hint">Entrez votre texte ici</string>
+</resources>
