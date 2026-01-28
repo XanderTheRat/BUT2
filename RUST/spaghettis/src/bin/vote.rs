@@ -1,16 +1,24 @@
-use std::io::{stdin, stdout, Write};
+use clap::Parser;
+
 use std::collections::BTreeMap as Map;
+use std::io::{stdin, stdout, Write};
+
+use spaghettis::configurations::Configuration;
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let config = Configuration::parse();
+    let candidats = config.get_candidates();
+
     let votants = ["Tux", "Fedora", "Tix", "Nixos", "Gludul", "Arch"];
-    let mut a_voter: Vec<String> = Vec::new(); 
-    
+    let mut a_voter: Vec<String> = Vec::new();
+
     let mut scores: Map<String, i32> = Map::new();
-    scores.insert("Fedora".to_string(), 30);
-    scores.insert("Tux".to_string(), 12);
-    scores.insert("Arch".to_string(), 0);
+    for candidat in &candidats {
+        scores.insert(candidat.clone(), 0);
+    }
 
     println!("Bienvenue dans le système de vote ! Tapez ':q' pour quitter.");
+    println!("candidats disponibles : {:?}", candidats);
 
     loop {
         let input = match get_input() {
@@ -47,11 +55,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 }
             },
             "voter" => {
-                if parts.len() < 3 {
+                if parts.len() < 2 {
                     println!("Erreur : Utilisation correcte -> voter <NOM_VOTANT> <NOM_CANDIDAT>");
                 }else {
                 	let nom_votant = parts[1];
-                	let nom_candidat = parts[2];
+                	let nom_candidat = if parts.len() >= 3{
+                        parts[2]
+                    }else {
+                        "Blanc"
+                    };
 
                 	if !votants.contains(&nom_votant) {
                     	println!("Erreur : '{}' n'est pas sur la liste des inscrits.", nom_votant);
@@ -63,9 +75,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
                 	if let Some(score) = scores.get_mut(nom_candidat) {
                     	*score += 1;    
-                	} 
-                	a_voter.push(nom_votant.to_string());
-                	println!("A voté !");
+                	   a_voter.push(nom_votant.to_string());
+                	   println!("A voté !");
+                	} else {
+                        println!("Le candidat {} n'existe pas.", nom_candidat);
+                        println!("Les candidats disponibles sont : {:?}", candidats);
+                    }
                 }
             },
             _ => println!("Commande inconnue : '{}'", command),
